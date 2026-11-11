@@ -18,6 +18,7 @@ dependencies = [
   "qdrant-client>=1.14,<2",
   "groq>=0.20,<1",
   "pypdf>=6,<7",
+  "fastembed>=0.6,<1",
 ]
 
 [project.optional-dependencies]
@@ -32,3 +33,6 @@ gapfinder = ["static/*", "samples/*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.vercel]
+entrypoint = "gapfinder.main:app"
